@@ -1,0 +1,10 @@
+if coverURL
+  a href=librivoxURL
+    img height='200px' src=coverURL
+else
+  if librivoxURL
+    a href=librivoxURL
+      = librivoxURL
+  else
+    a href=rssURL
+      span RSS: {{rssURL}}

@@ -1,0 +1,9 @@
+.row
+  .col-md-11
+    h3 User Management
+
+  .col-md-1
+    a.table-new.btn.btn-default.pull-right title='new user' click='createUser'
+      i.fa.fa-plus
+
+= pageable-table

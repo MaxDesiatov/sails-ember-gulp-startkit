@@ -1,0 +1,19 @@
+.row
+  .col-md-6
+    ul.pagination
+      = each controller.pages
+        li{bind-attr class="active disabled"}
+          if dropdown
+            a{action dropDown} {{{sym}}}
+          else
+            a{action goToPage page} {{{sym}}}
+
+.row
+  .col-md-12
+    = input classNames='form-control' value=controller.rawQuery escape-press='clearInput'
+    br
+
+.row
+  .col-md-12
+    table.table.user-table
+      = partial controller.partial

@@ -1,0 +1,26 @@
+nav.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    = link-to 'users' classNames='navbar-brand'
+      | Example Sails.js/Ember.js App
+
+    ul.nav.navbar-nav.pull-right#header-current-user
+      li.dropdown
+        a.dropdown-toggle.pull-right data-toggle="dropdown" title=user.name
+          | logged in as user
+          b.caret
+        ul.dropdown-menu role="menu"
+          li
+            a
+              i.icon-lock
+              | &nbsp;&nbsp;Change password
+          li
+            a href='/logout'
+              i.icon-signout
+              | &nbsp;&nbsp;Sign out
+
+    ul.nav.navbar-nav#header-navigation
+      = link-to 'users' activeClass='active' tagName='li'
+        a href=view.href Users
+
+.container
+  = outlet

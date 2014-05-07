@@ -1,0 +1,31 @@
+tr
+  th Username
+  th First Name
+  th Last Name
+  th Role
+  th.edit Edit
+each itemController='user'
+  tr
+    if isEditing
+      td.vmiddle
+        = input value=name
+      td.vmiddle
+        = input value=firstName
+      td.vmiddle
+        = input value=lastName
+      td.vmiddle = group
+      td.edit
+        a.btn.btn-default{action 'stopEdit'} title='remove'
+          i.fa.fa-times
+        a.btn.btn-default{action 'saveChanges'} title='save'
+          i.fa.fa-check
+    else
+      td.vmiddle = name
+      td.vmiddle = firstName
+      td.vmiddle = lastName
+      td.vmiddle = group
+      td.edit
+        a.btn.btn-default{action 'removeModel'} title='remove'
+          i.fa.fa-trash-o
+        a.btn.btn-default{action 'startEdit'} title='edit'
+          i.fa.fa-edit
