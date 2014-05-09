@@ -13,7 +13,7 @@ but plain old JavaScript is also supported
 
 ## How to run
 
-* node.js is an obvious prerequisite
+* [node.js](http://nodejs.org) 0.10 is an obvious prerequisite
 * `npm install` in the directory of a StartKit clone first time to install all
 the dependencies
 * `./node_modules/.bin/cult` to start the server and also watch/livereload cycle
