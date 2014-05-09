@@ -1,6 +1,4 @@
-`import PageableMixin from "appkit/controllers/pageable"`
-
-UsersController = Ember.ArrayController.extend PageableMixin,
+UsersController = Ember.ArrayController.extend
   actions:
     createUser: ->
       user = @store.createRecord 'user',
@@ -11,19 +9,5 @@ UsersController = Ember.ArrayController.extend PageableMixin,
         isCompleted: true
 
       user.save()
-
-  sort: 'name'
-  sortDirection: 'ASC'
-  rawQuery: ''
-  partial: 'users-table'
-
-  where:
-    Em.computed ->
-      raw = @get 'rawQuery'
-      if raw.length > 0
-        lastName: like: "%#{raw}%"
-      else
-        {}
-    .property 'rawQuery'
 
 `export default UsersController`

@@ -1,6 +1,4 @@
-`import MetadataRoute from "appkit/routes/metadata"`
-
-UsersIndexRoute = MetadataRoute.extend
-  modelName: 'user'
+UsersIndexRoute = Ember.Route.extend
+  model: -> @store.find 'user'
 
 `export default UsersIndexRoute`
